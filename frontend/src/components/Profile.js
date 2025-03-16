@@ -8,7 +8,11 @@ const Profile = () => {
 
   return (
     <div>
-      {user ? <p>Welcome, {user.username}!</p> : <p>Please log in.</p>}
+      {user && user.username ? (
+        <p>Welcome, {user.username}!</p>
+      ) : (
+        <p>Please log in.</p>
+      )}
     </div>
   );
 };
